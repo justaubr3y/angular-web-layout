@@ -1,15 +1,15 @@
 <header>
   <div class="container-fluid">
     <div class="row">
-        <a href="#first-fold" class="navbar-brand">LOGO</a>
+        <a routerLink='/' class="navbar-brand">LOGO</a>
         <a href="#">[DISCOVER MORE]</a>
     </div>
   </div>
 </header>
 <nav>
   <ul>
-    <li><a href="#first-fold"><div class="nav-slide"></div></a></li>
-    <li><a href="#second-fold"><div class="nav-slide"></div></a></li>
+    <li><a (click)="clickEvent($event)"><div class="nav-slide"></div></a></li>
+    <li><a (click)="clickEvent($event)"><div class="nav-slide"></div></a></li>
   </ul>
 </nav>
 <main>
@@ -29,19 +29,19 @@
       </div>
 
       <div class="next-slide">
-          <a href="#second-fold">
+          <a pageScroll href="#secondfold">
             <i class="fa fa-chevron-down" aria-hidden="true"></i>
           </a>
       </div>
     </div>
   </section>
 
-  <section id="second-fold" class="v-header">
+  <section id="secondfold" class="v-header">
     <div class="fullscreen-img-wrap">
       <div class="container">
         <div class="row">
           <div class="col-md-6 hidden-xs"></div>
-          <div class="second-fold-content col-md-6 col-xs-12">
+          <!-- <div class="second-fold-content col-md-6 col-xs-12">
             <h1>DONEC NEC JUSTO</h1>
             <p>
               Donec nec justo eget felis facilisis fermentum. Aliquam
@@ -52,7 +52,7 @@
               faucibus adipiscing, commodo quis, gravida id, est. Sed
               lectus. Praesent elementum hendrerit tortor.
             </p>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
