@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+  overflow-x: hidden;
+}
+a {
+  color: inherit;
+}
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  padding: 0.5rem 1.5rem;
+}
+nav {
+  position: fixed;
+  z-index: 3;
+  right: 0;
+  bottom: 20rem;
+}
+nav ul li {
+  list-style-type: none;
+}
+.nav-slide {
+  width: 30px;
+  height: 4px;
+  background: #333;
+  margin-bottom: 1.5rem;
+}
+nav ul li a:hover {
+  background: #2352b8;
+  width: 50px;
+}
+.navbar-brand {
+  border: 1px solid #333;
+  padding: 0.5rem 2.5rem;
+}
+#vid {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+.vid-overlay {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: #fff;
+  opacity: 0.30;
+  height: 100vh;
+  width: 100vw;
+}
+.vid-content {
+  position: fixed;
+  z-index: 2;
+  bottom: 15rem;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  left: 0;
+}
+.vid-content h1 {
+  font-size: 3.2rem;
+  font-weight: 600;
+}
+.vid-content p {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+.vr{
+  height: 4px;
+  background: #333;
+  width: 100px;
+  margin: 0 auto;
+}
+.next-slide {
+  position: fixed;
+  z-index: 2;
+  bottom: 1rem;
+  width: 100%;
+  text-align: center;
+  left: 0;
+}
+.next-slide i {
+  font-size: 2.5rem;
+}
