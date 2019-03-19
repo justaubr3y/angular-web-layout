@@ -1,22 +1,26 @@
-<div class="first-fold" [@routerTransition]>
+<div class="first-fold">
   <header>
     <div class="container-fluid">
       <div class="row">
-          <a [routerLink]="['/']" class="navbar-brand">LOGO</a>
-          <a [routerLink]="['secondfold']">[DISCOVER MORE]</a>
+          <div class="col-md-6">
+            <a [routerLink]="['/']" class="navbar-brand">LOGO</a>
+          </div>
+          <div class="discover col-md-6">
+            <a [routerLink]="['secondfold']">[DISCOVER MORE]</a>
+          </div>
       </div>
     </div>
   </header>
   <nav>
     <ul>
       <li><a [routerLink]="['/']"><div class="nav-slide"></div></a></li>
-      <li><a [routerLink]="['secondfold']"><div class="nav-slide"></div></a></li>
+      <li><a [routerLink]="['secondfold']" class="second-nav"><div class="nav-slide"></div></a></li>
     </ul>
   </nav>
   <main>
     <section id="first-fold" class="v-header container">
-      <div class="fullscreen-video-wrap">
-        <video id="vid" control muted="true" autoplay="true" loop="true">
+      <div class="fullscreen-video-wrap" [@routerTransition]>
+        <video id="vid" autoplay muted>
           <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"/>
         </video>
 

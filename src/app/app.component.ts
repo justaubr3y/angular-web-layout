@@ -21,7 +21,7 @@ export class AppComponent {
   }
 
   ngAfterViewInit(){
-    var element : any = document.getElementById('vid');
+    let element : any = document.getElementById('vid');
     if(element) element.muted = "muted";
   }
 

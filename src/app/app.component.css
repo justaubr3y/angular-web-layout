@@ -27,15 +27,26 @@ nav {
 nav ul li {
   list-style-type: none;
 }
-.nav-slide {
+nav ul li a {
   width: 30px;
   height: 4px;
   background: #333;
   margin-bottom: 1.5rem;
+  position: fixed;
+  z-index: 5;
+  right: 0;
+}
+.second-nav {
+  margin-top: 20px;
+}
+.discover {
+  text-align: right;
 }
 nav ul li a:hover {
   background: #2352b8;
   width: 50px;
+  -webkit-transition: width 1s; /* Safari */
+  transition: width 1s;
 }
 .navbar-brand {
   border: 1px solid #333;

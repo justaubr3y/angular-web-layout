@@ -10,11 +10,11 @@ export function slideToRight() {
         state('*', style({})),
         transition(':enter', [
             style({ transform: 'translateX(-100%)' }),
-            animate('0.5s ease-in-out', style({ transform: 'translateX(0%)' }))
+            animate('0.10s ease-in-out', style({ transform: 'translateX(0%)' }))
         ]),
         transition(':leave', [
             style({ transform: 'translateX(0%)' }),
-            animate('0.5s ease-in-out', style({ transform: 'translateX(100%)' }))
+            animate('0.10s ease-in-out', style({ transform: 'translateX(100%)' }))
         ])
     ]);
 }
@@ -73,7 +73,7 @@ export function fadeInAnimation(){
             style({ opacity: 0 }),
 
             // animation and styles at end of transition
-            animate('.7s', style({ opacity: 1 }))
+            animate('.10s', style({ opacity: 1 }))
         ]),
     ]);
 }
