@@ -20,13 +20,9 @@ export class AppComponent {
 
   }
 
-  ngAfterViewInit(){
-    let element : any = document.getElementById('vid');
-    if(element) element.muted = "muted";
-  }
-
-  clickEvent(event) {
-    console.log(event);
+  ngAfterViewInit(): void {
+    var video: any = document.getElementById('vid');
+    if(video) video.muted = "true";
   }
 
   doSmth(reachedTarget: boolean): void {
