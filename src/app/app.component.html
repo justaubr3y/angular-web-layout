@@ -1,60 +1,43 @@
-<header>
-  <div class="container-fluid">
-    <div class="row">
-        <a routerLink='/' class="navbar-brand">LOGO</a>
-        <a href="#">[DISCOVER MORE]</a>
-    </div>
-  </div>
-</header>
-<nav>
-  <ul>
-    <li><a (click)="clickEvent($event)"><div class="nav-slide"></div></a></li>
-    <li><a (click)="clickEvent($event)"><div class="nav-slide"></div></a></li>
-  </ul>
-</nav>
-<main>
-  <section id="first-fold" class="v-header container">
-    <div class="fullscreen-video-wrap">
-      <video id="vid" autoplay muted loop>
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"/>
-      </video>
-
-      <div class="vid-overlay"></div>
-
-      <div class="vid-content">
-        <h1>LOREM IPSUM DOLOR</h1>
-        <div class="vr"></div>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.
-          <br/>Quisque volutpat mattis eros.</p>
-      </div>
-
-      <div class="next-slide">
-          <a pageScroll href="#secondfold">
-            <i class="fa fa-chevron-down" aria-hidden="true"></i>
-          </a>
+<div class="first-fold" [@routerTransition]>
+  <header>
+    <div class="container-fluid">
+      <div class="row">
+          <a [routerLink]="['/']" class="navbar-brand">LOGO</a>
+          <a [routerLink]="['secondfold']">[DISCOVER MORE]</a>
       </div>
     </div>
-  </section>
+  </header>
+  <nav>
+    <ul>
+      <li><a [routerLink]="['/']"><div class="nav-slide"></div></a></li>
+      <li><a [routerLink]="['secondfold']"><div class="nav-slide"></div></a></li>
+    </ul>
+  </nav>
+  <main>
+    <section id="first-fold" class="v-header container">
+      <div class="fullscreen-video-wrap">
+        <video id="vid" control muted="true" autoplay="true" loop="true">
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"/>
+        </video>
 
-  <section id="secondfold" class="v-header">
-    <div class="fullscreen-img-wrap">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 hidden-xs"></div>
-          <!-- <div class="second-fold-content col-md-6 col-xs-12">
-            <h1>DONEC NEC JUSTO</h1>
-            <p>
-              Donec nec justo eget felis facilisis fermentum. Aliquam
-              porttitor mauris sit amet orci. Aenean dignissim
-              pellentesque felis.<br/><br/>
-              Sed egestas, ante et vulputate volutpat, eros pede semper
-              est, vitae luctus metus libero eu augue. Morbi purus libero,
-              faucibus adipiscing, commodo quis, gravida id, est. Sed
-              lectus. Praesent elementum hendrerit tortor.
-            </p>
-          </div> -->
+        <div class="vid-overlay"></div>
+
+        <div class="vid-content">
+          <h1>LOREM IPSUM DOLOR</h1>
+          <div class="vr"></div>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.
+            <br/>Quisque volutpat mattis eros.</p>
+        </div>
+
+        <div class="next-slide">
+            <a [routerLink]="['secondfold']">
+              <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </a>
         </div>
       </div>
-    </div>
-  </section>
-</main>
+    </section>
+
+
+  </main>
+</div>
+<router-outlet></router-outlet>
